@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/appBarLayout">
+
+    <android.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:logo="@mipmap/ic_launcher"
+        android:title="@string/app_name"
+        android:subtitle="@string/map"
+        app:popupTheme="@style/AppTheme.PopupOverlay" />
+    </android.support.design.widget.AppBarLayout>
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/radio_NORMAL"
+        android:text="Normal map"
+        android:layout_marginTop="?attr/actionBarSize"/>
+
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/radio_NORMAL"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <RadioButton
+        android:id="@+id/radio_HYBRID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hybrid map"
+        android:layout_below="@+id/appBarLayout"
+        android:layout_centerHorizontal="true" />
+
+    <RadioButton
+        android:id="@+id/radio_SATELLITE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Satellite map"
+        android:layout_below="@+id/appBarLayout"
+        android:layout_alignParentEnd="true" />
+
+
+
+</RelativeLayout>
+
+
+
